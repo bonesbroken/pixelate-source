@@ -31,10 +31,9 @@ async function loadShoelaceElements() {
 }
 
 $(function() {
-    console.log(pixelateSettings)
+    loadShoelaceElements();
     updateUI(pixelateSettings);
     pixelateSource(pixelateSettings); // Initial setup
-    loadShoelaceElements();
     initApp();
 });
 
