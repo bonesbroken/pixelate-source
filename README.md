@@ -1,2 +1,4 @@
-# pixelate-source
-Pixelate source to pixelate an image in Streamlabs Desktop
+Website: https://bonesbroken.com/  
+
+# Pixelate Source
+Pixelate your image sources in Streamlabs Desktop.

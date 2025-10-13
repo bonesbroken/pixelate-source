@@ -1,0 +1,37 @@
+{
+    "version": "1.1.5",
+    "name": "Pixelate Source",
+    "buildPath": "dist/",
+    "permissions": ["slobs.scenes-sources"],
+    "supportedPlatforms": ["twitch", "youtube", "facebook"],
+    "icon": "./images/app-sq.jpg",
+    "sources": [
+      {
+        "type": "browser_source",
+        "name": "Pixelate Source",
+        "id": "pixelate-source",
+        "about": {
+          "description": "Pixelate your image sources! Open the app, upload your image, and pixelate!",
+          "bannerImage": "./images/app-icon.jpg"
+        },
+        "file": "index.html",
+        "initialSize": {
+          "type": "absolute",
+          "width": 500,
+          "height": 500
+        }
+      }
+    ],
+    "pages": [
+      {
+        "slot": "top_nav",
+        "file": "settings.html",
+        "persistent": true,
+        "allowPopout": true,
+        "popOutSize": {
+          "width": 600,
+          "height": 600
+        }
+      }
+    ]
+  }
