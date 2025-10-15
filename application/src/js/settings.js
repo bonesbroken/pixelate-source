@@ -105,7 +105,8 @@ $('input.image-input').on('change', event => {
             return;
         }
 
-        if ((selectedFile.size / (1024 * 204)) > 10) {
+        console.log((selectedFile.size / (1024 * 1024)))
+        if ((selectedFile.size / (1024 * 1024)) > 10) {
             showAlert('#generalAlert', 'File size too large.', 'Please upload a file less than 10 MB.');
             elem[0].value = '';
             return;
@@ -114,7 +115,7 @@ $('input.image-input').on('change', event => {
 
         streamlabs.userSettings.addAssets([ { name: `${selectedFile.name}_${String(selectedFile.lastModified)}`, file: selectedFile } ]).then(result => {
             console.log(result);
-            pixelateSettings.customImageUrl = result.customImage;
+            pixelateSettings.customImageUrl = result[`${selectedFile.name}_${String(selectedFile.lastModified)}`];
             pixelateSource(pixelateSettings);
 
             $('#spinner').hide();
