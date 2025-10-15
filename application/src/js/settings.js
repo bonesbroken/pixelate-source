@@ -112,7 +112,7 @@ $('input.image-input').on('change', event => {
         }
         $('#spinner').show();
 
-        streamlabs.userSettings.addAssets([ { name: 'customImage', file: selectedFile } ]).then(result => {
+        streamlabs.userSettings.addAssets([ { name: `${selectedFile.name}_${String(selectedFile.lastModified)}`, file: selectedFile } ]).then(result => {
             console.log(result);
             pixelateSettings.customImageUrl = result.customImage;
             pixelateSource(pixelateSettings);
